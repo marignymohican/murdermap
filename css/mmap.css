@@ -1,0 +1,344 @@
+#disclaimer {
+	margin: 0;
+	padding: 15px;
+	width: 100vw;
+	font-size: 1.5em;
+	font-family: sans-serif;
+	background-color: #000;
+	color: yellow;
+}
+
+#article.page #container {
+	width: 100%;
+}
+
+#mMap {
+	clear: both;
+    width: 100%;
+    height: 450px;
+}
+#mWindow {
+	min-width: 250px;
+	max-width: 300px;
+}
+#mWindow .crime_thumb {
+	float: right;
+	margin-left: 8px;
+	height: 75px;
+}
+
+#mm_namelinks {
+    margin: 0 0 40px;
+    padding: 0;
+    font-size: 1.2em;
+}
+#mm_namelinks .mm_namelinks_month {
+    clear: both;
+}
+#mm_namelinks .mm_namelinks_month h2 {
+    margin: 0 0 15px;
+    text-align: center;
+    font-size: 1.5em;
+}
+#mm_namelinks .mm_namelinks_month h2:nth-child(n+1) {
+    margin-top: 40px;
+}
+#mm_namelinks .mm_namelinks_month .mm_name {
+    display: inline-block;
+    padding: 15px 0;
+    width: 33%;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 1.3em;
+}
+#mm_namelinks .mm_namelinks_month .mm_name a {
+    text-decoration: none;
+    border-bottom: none;
+}
+#mm_namelinks .mm_namelinks_month .mm_name:nth-child(n*3) {
+    clear: left;
+}
+
+#mInterstitial {
+    clear: both;
+	display: flex;
+}
+#mInterstitial > div {
+	width: 45%;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+#mInterstitial > div h5 {
+    margin: 0 0 0 -10px;
+    font-size: 2em;
+    font-family: 'Teko', sans-serif;
+}
+#mInterstitial > div .crime_thumb {
+	float: left;
+	margin-right: 8px;
+	height: 75px;
+}
+
+#crime_Counter {
+    float: left;
+    margin: 0 0 25px;
+    padding: 0;
+    width: 100%;
+    min-height: 275px;
+}
+/*counter*/
+
+#crime_Counter #crime_Counter_counter {
+    float: left;
+    margin-right: 25px;
+    width: 300px;
+}
+#crime_Counter .crime_Counter_year {
+    margin: 0 0 5px;
+    width: 100%;
+    font-size: 2em;
+}
+#crime_Counter #crime_Counter_prev.crime_Counter_year {
+    height: 100px;
+}
+#crime_Counter .crime_Counter_count {
+    display: inline-block;
+    margin: 0 50px 20px 0;
+    width: 290px;
+}
+#crime_Counter .crime_Counter_count .crime_Counter_number {
+    margin: 0;
+    width: 100%;
+    height: .8em;
+    color: #880000;
+    line-height: .8em;
+    font-size: 5em;
+    font-weight: bold;
+    text-align: right;
+}
+#crime_Counter #crime_Counter_prev .crime_Counter_count .crime_Counter_number {
+    font-size: 2.5em;
+    color: #555;
+}
+#crime_Counter .crime_Counter_count .crime_Counter_text {
+    margin: 0;
+    width: 100%;
+    text-align: right;
+}
+#crime_Counter #crime_Counter_prev .crime_Counter_count .crime_Counter_text {
+    font-size: .65em;
+}
+#crime_Counter .crime_Counter_count .crime_Counter_text .span {
+    font-size: 1.5em;
+    font-variant: small-caps;
+}
+
+/* bar graph*/
+#crime_graph_holder {
+    float: left;
+	width: 600px;
+    height: 275px;
+}
+#crime_Counter #crime_graph_plotly {
+	display: none;
+	width: 100%;
+}
+#crime_Counter #crime_Counter_graph {
+	position: relative;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+#crime_Counter #crime_Counter_graph p {
+	clear: both;
+	margin: 3px;
+	font-size: .8em;
+	text-align: right;
+}
+#crime_Counter #graph_head {
+	display: none;
+	margin: 1em 0 8px;
+	font-size: 2em;
+}
+#crime_Counter #crime_Counter_graph .cc_month {
+    float: left;
+    position: relative;
+    padding: 0 3px;
+    width: 7.25%;
+    border-bottom: 1px solid #555;
+    height: 95%;
+    font-size: 1em;
+    text-align: center;
+}
+#crime_Counter #crime_Counter_graph .cc_month span:first-child {
+    z-index: 5000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    text-shadow: 1px 1px 1px #FFF, -1px 1px 1px #FFF, -1px -1px 1px #FFF, 1px -1px 1px #FFF;
+}
+#crime_Counter #crime_Counter_graph .cc_month:nth-child(odd) {
+    background: -moz-linear-gradient(top, rgba(250,250,250,0.5) 0%, rgba(255,255,255,0.5) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(250,250,250,0.5) 0%,rgba(255,255,255,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(250,250,250,0.5) 0%,rgba(255,255,255,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80e8fffc', endColorstr='#80ffffff',GradientType=0 ); /* IE6-9 */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80c9fffd', endColorstr='#80ffffff',GradientType=0 ); /* IE6-9 */
+}
+#crime_Counter #crime_Counter_graph .cc_month .cc_year {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 48%;
+    height: 10px;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 1px #FFF, -1px 1px 1px #FFF, -1px -1px 1px #FFF, 1px -1px 1px #FFF;
+}
+#crime_Counter #crime_Counter_graph .cc_month .cc_year.prev {
+    left: 48%;
+}
+
+#crime_Counter #crime_Counter_graph .cc_graph_bar {
+    background: rgb(248,80,50); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 11%, rgba(246,41,12,1) 28%, rgba(240,47,23,1) 71%, rgba(240,47,23,1) 94%, rgba(241,111,92,1) 98%, rgba(231,56,39,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(248,80,50,1) 0%,rgba(241,111,92,1) 11%,rgba(246,41,12,1) 28%,rgba(240,47,23,1) 71%,rgba(240,47,23,1) 94%,rgba(241,111,92,1) 98%,rgba(231,56,39,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(248,80,50,1) 0%,rgba(241,111,92,1) 11%,rgba(246,41,12,1) 28%,rgba(240,47,23,1) 71%,rgba(240,47,23,1) 94%,rgba(241,111,92,1) 98%,rgba(231,56,39,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=1 ); /* IE6-9 */
+    
+    width: 48%;
+    position: absolute;
+    bottom: 0;
+    left: 1%;
+    vertical-align: bottom;
+}
+#crime_Counter #crime_Counter_graph .cc_graph_bar:active,
+#crime_Counter #crime_Counter_graph .cc_graph_bar:hover {
+    background: #880000;
+}
+
+#crime_Counter #crime_Counter_graph .cc_graph_bar.prev {
+    background: -moz-linear-gradient(left, rgba(204,204,204,0.65) 0%, rgba(247,247,247,0.65) 3%, rgba(204,204,204,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(204,204,204,0.65) 0%,rgba(247,247,247,0.65) 3%,rgba(204,204,204,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(204,204,204,0.65) 0%,rgba(247,247,247,0.65) 3%,rgba(204,204,204,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6cccccc', endColorstr='#a6cccccc',GradientType=1 ); /* IE6-9 */
+    left: 49%;
+}
+#crime_Counter #crime_Counter_graph .cc_graph_bar.prev:active,
+#crime_Counter #crime_Counter_graph .cc_graph_bar.prev:hover {
+    background: #555555;
+}
+
+#crime_Counter #graph_number {
+    display: none;
+    z-index: 999;
+    position: fixed;
+    padding: 4px;
+    border: 1px solid #555;
+    background-color: #CCC;
+    font-size: 1em;
+    font-family: arial;
+}
+
+#crime_Counter #crime_Counter_graph #crime_Counter_graph_caption {
+	position: absolute;
+	bottom: -28px;
+	left: 0;
+	font-size: 0.7em;
+}
+#crime_Counter #crime_Counter_graph .cc_gc {
+	display: inline-block;
+	margin-right: 4px;
+}
+#crime_Counter #crime_Counter_graph  .cc_gc .cc_gc_color {
+	display: inline-block;
+	margin-right: 2px;
+	height: 1em;
+	width: 1em;
+	background-color: rgba(248,80,50,1);
+}
+#crime_Counter #crime_Counter_graph  .cc_gc.prev .cc_gc_color {
+	background-color: rgba(204,204,204,0.65);
+}
+#crime_Counter .toggle_graph {
+	cursor: pointer;
+	margin: 3px 0;
+	padding: 1px 2px;
+	background-color: #0088EE;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-family: "Benton Sans",Arial,sans-serif;
+}
+#crime_Counter .toggle_graph:active,
+#crime_Counter .toggle_graph:hover {
+	background-color: #0164AA;
+	color: #CCCCCC;
+}
+#crime_graph_plotly .toggle_graph {
+	display: inline-block;
+	font-size: 0.7em;
+}
+@media screen and (max-width: 1279px) {
+    #crime_Counter #crime_Counter_counter {
+        float: left;
+        margin-right: 30px;
+    }
+}
+@media screen and (max-width: 699px) {
+    #crime_Counter {
+        padding-bottom: 15px;
+        width: 100%;
+    }
+    #crime_Counter #crime_Counter_counter {
+        float: none;
+        margin-left: 0;
+    }
+    #crime_Counter .crime_Counter_count .crime_Counter_number,
+    #crime_Counter .crime_Counter_count .crime_Counter_text {
+        text-align: left;
+    }
+	#crime_Counter #crime_Counter_graph p {
+		clear: both;
+		margin: 3px;
+		font-size: .8em;
+		text-align: right;
+	}
+	#crime_Counter #graph_head {
+		display: block;
+	}
+	#crime_Counter #crime_graph_holder {
+        float: none;
+        width: 100%;
+		height: 300px;
+    }
+	#crime_Counter #graph_head {
+		display: block;
+	}
+	
+    #article.page #container #crime_Counter #crime_Counter_graph p {
+		font-size: 0.55em;
+	}
+    #crime_Counter #crime_Counter_graph .cc_month {
+        font-size: 0.65em;
+        width: 6%;
+    }
+    #crime_Counter .graph_caption {
+        margin-top: -2em;
+    }
+	#mInterstitial {
+		flex-direction: column;
+	}
+	#mInterstitial > div {
+		width: 100%;
+	}
+	#mm_namelinks .mm_namelinks_month {
+		margin-bottom: 15px;
+	}
+	#mm_namelinks .mm_namelinks_month .mm_name {
+		display: block;
+		padding: 15px 0 0;
+		width: 100%;
+	}
+}

@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+<!-- these styles attempt to mock the behavior of movable type article content well -->
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+		font-size: 1em;
+	}
+	.entry-content { 
+		margin: 50px auto; 
+		width: 980px; 
+	}
+	@media screen and (min-width:768px) {
+		/* largest viewport tweaks */
+		
+	}
+	@media screen and (max-width: 700px) {
+		/* mobile tweaks */
+		.entry-content {
+			width: 100%;
+			/*padding: 0 10px;*/
+		}
+	}	
+</style>
+<script
+			  src="//code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+</head>
+
+<body><div class="entry-content">
+<!-- your custom content goes beneath this line -->
+<!-- --- if using Google Maps Javascript API or jQueryUI, move the <script>'s and/or <link>'s from above to here! -->
+<!-- --- that way you dont forget to copypasta it to your movable type entry/page -->
+
+<div id="disclaimer">This page is an archive of the map originally displayed at http://www.nola.com/crime/murders.<br />
+The numbers and names displayed here were compiled in late 2017/early 2018 and may have since been revised.</div>
+
+<div id="asset-21898588" >&nbsp;</div>
+
+<script src="./js/mmap.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXAvHxsz3yzg3fFG_m8RW8Q5QIDx9LSZc&callback=buildmap"></script>
+<link rel="stylesheet" href="./css/mmap.css" />
+
+<div id="nola_Crimes">
+<div id="crime_Counter">
+	<div id="graph_number"></div>
+	<div id="crime_Counter_counter">
+		<div id="crime_Counter_curr" class="crime_Counter_year">
+			<div class="crime_Counter_count">
+				<div class="crime_Counter_number">000</div>
+				<div class="crime_Counter_text"><span>Murders</span> in <span class="cc_year">YYYY</span></div>
+			</div>
+		</div>
+		<div id="crime_Counter_prev" class="crime_Counter_year">
+			<div class="crime_Counter_count">
+				<div class="crime_Counter_number">000</div>
+				<div class="crime_Counter_text">Total <span>murders</span> in <span class="cc_year prev">YYYY</span></div>
+			</div>
+		</div>
+	</div>
+	<h5 id="graph_head">Incidents by month:</h5>
+	<div id="crime_graph_holder">
+		<div id="crime_graph_plotly" class="crime_graph">
+			<iframe width="100%" height="275" frameborder="0" scrolling="no" src="https://plot.ly/~nolacontent/36.embed?show_link=false"></iframe>
+			<div class="toggle_graph">View current data</div>
+		</div>
+		<div id="crime_Counter_graph" class="crime_graph">
+			<div class="cc_month">
+				<span>Jan</span>
+				<div class="cc_graph_bar"></div>
+				<div class="cc_graph_bar prev"></div>
+			</div>
+			<div class="cc_month">
+				<span>Feb</span>
+				<div class="cc_graph_bar"></div>
+				<div class="cc_graph_bar prev"></div>
+			</div>
+			<div class="cc_month">
+				<span>Mar</span>
+				<div class="cc_graph_bar"></div>
+				<div class="cc_graph_bar prev"></div>
+			</div>
+			<div class="cc_month">
+				<span>Apr</span>
+				<div class="cc_graph_bar"></div>
+				<div class="cc_graph_bar prev"></div>
+			</div>
+			<div class="cc_month">
+				<span>May</span>
+				<div class="cc_graph_bar"></div>
+				<div class="cc_graph_bar prev"></div>
+			</div>
+			<div class="cc_month">
+				<span>Jun</span>
+				<div class="cc_graph_bar"></div>
+				<div class="cc_graph_bar prev"></div>
+			</div>
+			<div class="cc_month">
+				<span>Jul</span>
+				<div class="cc_graph_bar"></div>
+				<div class="cc_graph_bar prev"></div>
+			</div>
+			<div class="cc_month">
+				<span>Aug</span>
+				<div class="cc_graph_bar"></div>
+				<div class="cc_graph_bar prev"></div>
+			</div>
+			<div class="cc_month">
+				<span>Sep</span>
+				<div class="cc_graph_bar"></div>
+				<div class="cc_graph_bar prev"></div>
+			</div>
+			<div class="cc_month">
+				<span>Oct</span>
+				<div class="cc_graph_bar"></div>
+				<div class="cc_graph_bar prev"></div>
+			</div>
+			<div class="cc_month">
+				<span>Nov</span>
+				<div class="cc_graph_bar"></div>
+				<div class="cc_graph_bar prev"></div>
+			</div>
+			<div class="cc_month">
+				<span>Dec</span>
+				<div class="cc_graph_bar"></div>
+				<div class="cc_graph_bar prev"></div>
+			</div>
+			<div id="crime_Counter_graph_caption">
+				<div class="cc_gc">
+					<span class="cc_gc_color"></span>
+					<span class="cc_year">YYYY</span>
+				</div>
+				<div class="cc_gc prev">
+					<span class="cc_gc_color"></span>
+					<span class="cc_year prev">YYYY</span>
+				</div>
+				<div class="toggle_graph">View historical data</div>
+			</div>
+			<p>Figures compiled by The Times-Picayune</p>
+		</div>
+	</div>
+</div>
+<div id="mInterstitial">
+	<div id="mLatest"></div>
+	<div id="mMoreCrime">
+		<h3>Violent Crime by District:</h3>
+		<a href="../crimemap/">
+			<img class="crime_thumb" src="" /></a>
+        <div>Calls for Service for incidents reported to the NOPD</div>
+        <a href="../crimemap/"><strong>View the map</strong></a></span>
+	</div>
+</div>
+<div id="mMap"></div>
+<div id="mm_namelinks"></div>
+</div>	
+
+
+
+
+
+<!-- your custom content goes above this line -->
+</div></body>
+</html>
